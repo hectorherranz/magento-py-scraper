@@ -5,7 +5,7 @@
 
 This script has been carried out under the context of the Subject _Tipology and life cycle of data_, belonging to the Master's Degree in Data Science of the Universitat Oberta de Catalunya. In it, scraping _web techniques are applied_ through the Python programming language to extract data from some web and generate a _dataset_.
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/hectorherranz91/magento-py-scraper/blob/master/mscraper/scraper.png "Dataset")
 
 ## Context
 
