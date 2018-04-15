@@ -1,5 +1,5 @@
 # magento-py-scraper
-A python scraper for magento
+(Under construction) A python scraper for magento
 
 ## Description
 
