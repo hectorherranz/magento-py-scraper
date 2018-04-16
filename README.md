@@ -86,26 +86,38 @@ $ webcrawler --seeds http://somemagento.com,http://blog.somemagento.com --crawl-
 ## About the Code
 
 The base crawler uses a producer/consumer [queue](https://docs.python.org/2/library/queue.html). The crawler fills the queue acording to the indicated algorithm, [BFS](https://en.wikipedia.org/wiki/Breadth-first_search) or [DFS](https://en.wikipedia.org/wiki/Depth-first_search).
+
 It uses [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) with [lambda](https://www.python-course.eu/lambda.php) expresions on BeautifulSoup to find product atributes.
 
 magento-py-scraper has this basic crawling features:
+
 ![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Estimate the size of the website (It will be shown to you before start)
+
 (will) validate if the selected web is using Magento ecommerce.
+
 (will) find the owner of the website
 
+
 magento-py-scraper has advanced crawling features:
+
 ![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Parse robots.txt
+
 (will) support proxies/tor
+
 (will) Allow throttle requests.
+
 ![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Avoid spider traps
+
 
 ## Context
 
 This script performs crawling using the BFS or DFS algorithms and extracts a list of **products** of a magento website that you provided.
 
+
 ## Content
 
 The content of the resulting _dataset_ is one row per product including the host, product name , product price, category, image url and url to the product.
+
 
 ## Acknowledgments
 
@@ -116,10 +128,12 @@ Thanks to [debugtalk](https://github.com/debugtalk/WebCrawler), I used his well-
 
 A colleague from when I studied engineering told me that in his work they were using an online service to scraping about Magento ecommerce products. Then I said: I make you one, for free!
 
+
 ## License
 
 Open source licensed under the MIT license.
 The MIT license is a great choice because it allows you to share your code under a copyleft license without forcing others to expose their proprietary code, it’s business friendly and open source friendly while still allowing for monetization. Here’s why I use the MIT license and what it’s all about.
+
 
 ## Team
 
