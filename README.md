@@ -96,6 +96,7 @@ magento-py-scraper has advanced crawling features:
 
 &ensp;![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Avoid spider traps
 
+**The scrape_request() function of "core" file contains the code for the product scraping part.** Other mods are over the code.
 
 ## Context
 
