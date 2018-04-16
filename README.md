@@ -1,5 +1,5 @@
 # magento-py-scraper
-(Under construction) A python scraper for magento
+A python scraper for magento
 
 ## Description
 
@@ -31,7 +31,8 @@ optional arguments:
                         Specify config file path.
   --seeds SEEDS         
                         Currently Only supports 1 seed (target)
-  --cookies COOKIES     Specify cookies, several cookies can be joined by '|'.
+  --cookies COOKIES     
+                        Specify cookies, several cookies can be joined by '|'.
                         e.g. 'lang:en,country:us|lang:zh,country:cn'
   --crawl-mode CRAWL_MODE
                         Specify crawl mode, BFS or DFS.
@@ -110,7 +111,7 @@ The content of the resulting _dataset_ is one row per product including the host
 
 ## Acknowledgments
 
-Thanks to [debugtalk](https://github.com/debugtalk/WebCrawler), I used his well-implemented web crawler as a base to apply scraping techniques. I did not have time in addition to applying the scraping techniques, build a good crawler that used the BFS and DFS algorithms. 
+Thanks to [debugtalk](https://github.com/debugtalk/WebCrawler), I used his well-implemented web crawler as a base to apply scraping techniques. I did not have time to make a good implementation of the crawling algorithms in addition to applying the scraping techniques.
 
 
 ## Inspiration
@@ -128,6 +129,11 @@ The MIT license is a great choice because it allows you to share your code under
 
 The activity has been done individually by **Me**.
 
+## Dependecies
+
+I tested the code on Python 2.7.12
+
+Dependencies listed on setup.py
 
 ## Resources
 
