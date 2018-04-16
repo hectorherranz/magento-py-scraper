@@ -111,7 +111,7 @@ The content of the resulting _dataset_ is one row per product including the host
 
 ## Acknowledgments
 
-Thanks to [debugtalk](https://github.com/debugtalk/WebCrawler), I used his well-implemented web crawler as a base to apply scraping techniques. I did not have time in addition to applying the scraping techniques, build a good crawler that used the BFS and DFS algorithms. 
+Thanks to [debugtalk](https://github.com/debugtalk/WebCrawler), I used his well-implemented web crawler as a base to apply scraping techniques. I did not have time to make a good implementation of the crawling algorithms in addition to applying the scraping techniques.
 
 
 ## Inspiration
