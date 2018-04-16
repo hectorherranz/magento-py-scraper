@@ -13,7 +13,7 @@ $ mscraper -h
 usage: mscraper [-h] [-V] [--log-level LOG_LEVEL]
                   [--config-file CONFIG_FILE] [--seeds SEEDS]
                   [--crawl-mode CRAWL_MODE] [--max-depth MAX_DEPTH]
-                  [--concurrency CONCURRENCY] [--save-results SAVE_RESULTS]
+                  [--concurrency CONCURRENCY]
                   [--grey-user-agent GREY_USER_AGENT]
                   [--grey-traceid GREY_TRACEID]
                   [--grey-view-grey GREY_VIEW_GREY]
@@ -40,8 +40,6 @@ optional arguments:
                         Specify max crawl depth.
   --concurrency CONCURRENCY
                         Specify concurrent workers number.
-  --save-results SAVE_RESULTS
-                        Specify if save results, default is YES.
   --grey-user-agent GREY_USER_AGENT
                         Specify grey environment header User-Agent.
   --grey-traceid GREY_TRACEID
