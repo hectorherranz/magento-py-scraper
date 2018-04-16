@@ -97,6 +97,19 @@ magento-py-scraper has advanced crawling features:
 
 **The scrape_request() function of "core" file contains the code for the product scraping part.** Other mods are over the code.
 
+Files:
+ * **setup.py** Contains the setup with the author and dependencies.
+ * **output.csv** Anonymised dataset extracted from a magento website.
+ * **main.py** Entry point.
+ * Readme&License
+ * **/mscraper** folder containing the code.
+ * **/mscraper/__init__.py** Entry point.
+ * **/mscraper/core.py** Main logic. There is where the scraping techniques are aplied.
+ * **/mscraper/default_config.yml** Config file for configurations like user-agents.
+ * **/mscraper/helpers.py** Help functions, used to load config and more.
+ * **/mscraper/url_queue** Queue logic.
+ 
+
 ## Context
 
 This script performs crawling using the BFS or DFS algorithms and extracts a list of **products** of a magento website that you provided.
