@@ -31,7 +31,8 @@ optional arguments:
                         Specify config file path.
   --seeds SEEDS         
                         Currently Only supports 1 seed (target)
-  --cookies COOKIES     Specify cookies, several cookies can be joined by '|'.
+  --cookies COOKIES     
+                        Specify cookies, several cookies can be joined by '|'.
                         e.g. 'lang:en,country:us|lang:zh,country:cn'
   --crawl-mode CRAWL_MODE
                         Specify crawl mode, BFS or DFS.
@@ -128,6 +129,11 @@ The MIT license is a great choice because it allows you to share your code under
 
 The activity has been done individually by **Me**.
 
+## Dependecies
+
+I tested the code on Python 2.7.12
+
+Dependencies listed on setup.py
 
 ## Resources
 
