@@ -104,7 +104,7 @@ Files:
  * Readme&License
  * **/mscraper** folder containing the code.
  * **/mscraper/__init__.py** Entry point.
- * **/mscraper/core.py** Main logic. There is where the scraping techniques are aplied.
+ * **/mscraper/core.py** Main logic. There is where the scraping techniques are mainly aplied.
  * **/mscraper/default_config.yml** Config file for configurations like user-agents.
  * **/mscraper/helpers.py** Help functions, used to load config and more.
  * **/mscraper/url_queue** Queue logic.
