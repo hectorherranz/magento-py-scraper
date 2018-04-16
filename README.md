@@ -36,11 +36,8 @@ optional arguments:
                         Specify logging level, default is INFO.
   --config-file CONFIG_FILE
                         Specify config file path.
-  --seeds SEEDS         Specify crawl seed url(s), several urls can be
-                        specified with pipe; if auth needed, seeds can be
-                        specified like user1:pwd1@url1|user2:pwd2@url2
-  --include-hosts INCLUDE_HOSTS
-                        Specify extra hosts to be crawled.
+  --seeds SEEDS         
+                        Currently Only supports 1 seed (target)
   --cookies COOKIES     Specify cookies, several cookies can be joined by '|'.
                         e.g. 'lang:en,country:us|lang:zh,country:cn'
   --crawl-mode CRAWL_MODE
@@ -50,31 +47,15 @@ optional arguments:
   --concurrency CONCURRENCY
                         Specify concurrent workers number.
   --save-results SAVE_RESULTS
-                        Specify if save results, default is NO.
+                        Specify if save results, default is YES.
   --grey-user-agent GREY_USER_AGENT
                         Specify grey environment header User-Agent.
   --grey-traceid GREY_TRACEID
                         Specify grey environment cookie traceid.
   --grey-view-grey GREY_VIEW_GREY
                         Specify grey environment cookie view_gray.
-  --mailgun-api-id MAILGUN_API_ID
-                        Specify mailgun api id.
-  --mailgun-api-key MAILGUN_API_KEY
-                        Specify mailgun api key.
-  --mail-sender MAIL_SENDER
-                        Specify email sender.
-  --mail-recepients [MAIL_RECEPIENTS [MAIL_RECEPIENTS ...]]
-                        Specify email recepients.
-  --mail-subject MAIL_SUBJECT
-                        Specify email subject.
-  --mail-content MAIL_CONTENT
-                        Specify email content.
-  --jenkins-job-name JENKINS_JOB_NAME
-                        Specify jenkins job name.
-  --jenkins-job-url JENKINS_JOB_URL
-                        Specify jenkins job url.
-  --jenkins-build-number JENKINS_BUILD_NUMBER
-                        Specify jenkins build number.
+  --respect-robots RESPECT_ROBOTS
+                        Specify if the crawler must respect robots.txt file, default is YES.
 ```
 
 ## Examples
@@ -82,27 +63,41 @@ optional arguments:
 Specify config file.
 
 ```bash
-$ webcrawler --seeds http://debugtalk.com --crawl-mode bfs --max-depth 5 --config-file path/to/config.yml
+$ webcrawler --seeds http://somemagento.com --crawl-mode bfs --max-depth 5 --config-file path/to/config.yml
 ```
 
-Crawl in BFS mode with 20 concurrent workers, and set maximum depth to 5.
+Crawl in BFS mode with 20 concurrent workers, and set maximum depth to 5, respecting robots.txt.
 
 ```bash
-$ webcrawler --seeds http://debugtalk.com --crawl-mode bfs --max-depth 5 --concurrency 20
+$ webcrawler --seeds http://somemagento.com --crawl-mode bfs --max-depth 5 --concurrency 20 --respect-robots true
 ```
 
 Crawl in DFS mode, and set maximum depth to 10.
 
 ```bash
-$ webcrawler --seeds http://debugtalk.com --crawl-mode dfs --max-depth 10
+$ webcrawler --seeds http://somemagento.com --crawl-mode dfs --max-depth 10
 ```
 
 Crawl several websites in BFS mode with 20 concurrent workers, and set maximum depth to 10.
 
 ```bash
-$ webcrawler --seeds http://debugtalk.com,http://blog.debugtalk.com --crawl-mode bfs --max-depth 10 --concurrency 20
+$ webcrawler --seeds http://somemagento.com,http://blog.somemagento.com --crawl-mode bfs --max-depth 10 --concurrency 20
 ```
+## About the Code
 
+The base crawler uses a producer/consumer [queue](https://docs.python.org/2/library/queue.html). The crawler fills the queue acording to the indicated algorithm, [BFS](https://en.wikipedia.org/wiki/Breadth-first_search) or [DFS](https://en.wikipedia.org/wiki/Depth-first_search).
+It uses [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) with [lambda](https://www.python-course.eu/lambda.php) expresions on BeautifulSoup to find product atributes.
+
+magento-py-scraper has this basic crawling features:
+![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Estimate the size of the website (It will be shown to you before start)
+(will) validate if the selected web is using Magento ecommerce.
+(will) find the owner of the website
+
+magento-py-scraper has advanced crawling features:
+![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Parse robots.txt
+(will) support proxies/tor
+(will) Allow throttle requests.
+![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Avoid spider traps
 
 ## Context
 
