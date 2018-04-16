@@ -91,7 +91,7 @@ It uses [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) 
 
 magento-py-scraper has this basic crawling features:
 
-   ![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Estimate the size of the website (It will be shown to you before start)
+&ensp;![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Estimate the size of the website (It will be shown to you before start)
 
   * (will) validate if the selected web is using Magento ecommerce.
 
@@ -100,13 +100,13 @@ magento-py-scraper has this basic crawling features:
 
 magento-py-scraper has advanced crawling features:
 
-   ![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Parse robots.txt
+&ensp;![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Parse robots.txt
 
   * (will) support proxies/tor
 
   * (will) Allow throttle requests.
 
-   ![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Avoid spider traps
+&ensp;![alt text](https://github.com/iconic/open-iconic/blob/master/png/check-2x.png "Done") Avoid spider traps
 
 
 ## Context
