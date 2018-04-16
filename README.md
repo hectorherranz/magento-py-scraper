@@ -9,8 +9,8 @@ This script has been carried out under the context of the Subject _Tipology and 
 
 
 ```text
-$ webcrawler -h
-usage: webcrawler [-h] [-V] [--log-level LOG_LEVEL]
+$ mscraper -h
+usage: mscraper [-h] [-V] [--log-level LOG_LEVEL]
                   [--config-file CONFIG_FILE] [--seeds SEEDS]
                   [--crawl-mode CRAWL_MODE] [--max-depth MAX_DEPTH]
                   [--concurrency CONCURRENCY] [--save-results SAVE_RESULTS]
@@ -56,19 +56,19 @@ optional arguments:
 Specify config file.
 
 ```bash
-$ webcrawler --seeds http://somemagento.com --crawl-mode bfs --max-depth 5 --config-file path/to/config.yml
+$ mscraper --seeds http://somemagento.com --crawl-mode bfs --max-depth 5 --config-file path/to/config.yml
 ```
 
 Crawl in BFS mode with 20 concurrent workers, and set maximum depth to 5, respecting robots.txt.
 
 ```bash
-$ webcrawler --seeds http://somemagento.com --crawl-mode bfs --max-depth 5 --concurrency 20 --respect-robots true
+$ mscraper --seeds http://somemagento.com --crawl-mode bfs --max-depth 5 --concurrency 20 --respect-robots true
 ```
 
 Crawl in DFS mode, and set maximum depth to 10.
 
 ```bash
-$ webcrawler --seeds http://somemagento.com --crawl-mode dfs --max-depth 10
+$ mscraper --seeds http://somemagento.com --crawl-mode dfs --max-depth 10
 ```
 
 ## About the Code
