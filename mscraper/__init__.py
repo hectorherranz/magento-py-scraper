@@ -43,8 +43,9 @@ def main():
     parser.add_argument(
         '--concurrency', help="Specify concurrent workers number.")
 
-    parser.add_argument(
-        '--save-results', default='NO', help="Specify if save results, default is NO.")
+    # TODO: Allow specify output file
+    # parser.add_argument(
+    #     '--save-results', default='NO', help="Specify if save results, default is NO.")
 
     parser.add_argument("--grey-user-agent",
                         help="Specify grey environment header User-Agent.")
