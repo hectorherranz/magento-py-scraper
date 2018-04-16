@@ -12,20 +12,13 @@ This script has been carried out under the context of the Subject _Tipology and 
 $ webcrawler -h
 usage: webcrawler [-h] [-V] [--log-level LOG_LEVEL]
                   [--config-file CONFIG_FILE] [--seeds SEEDS]
-                  [--include-hosts INCLUDE_HOSTS] [--cookies COOKIES]
                   [--crawl-mode CRAWL_MODE] [--max-depth MAX_DEPTH]
                   [--concurrency CONCURRENCY] [--save-results SAVE_RESULTS]
                   [--grey-user-agent GREY_USER_AGENT]
                   [--grey-traceid GREY_TRACEID]
                   [--grey-view-grey GREY_VIEW_GREY]
-                  [--mailgun-api-id MAILGUN_API_ID]
-                  [--mailgun-api-key MAILGUN_API_KEY]
-                  [--mail-sender MAIL_SENDER]
-                  [--mail-recepients [MAIL_RECEPIENTS [MAIL_RECEPIENTS ...]]]
-                  [--mail-subject MAIL_SUBJECT] [--mail-content MAIL_CONTENT]
-                  [--jenkins-job-name JENKINS_JOB_NAME]
-                  [--jenkins-job-url JENKINS_JOB_URL]
-                  [--jenkins-build-number JENKINS_BUILD_NUMBER]
+                  [--respect-robots RESPECT_ROBOTS]
+   
 
 A web crawler for testing website links validation.
 
@@ -78,11 +71,6 @@ Crawl in DFS mode, and set maximum depth to 10.
 $ webcrawler --seeds http://somemagento.com --crawl-mode dfs --max-depth 10
 ```
 
-Crawl several websites in BFS mode with 20 concurrent workers, and set maximum depth to 10.
-
-```bash
-$ webcrawler --seeds http://somemagento.com,http://blog.somemagento.com --crawl-mode bfs --max-depth 10 --concurrency 20
-```
 ## About the Code
 
 The base crawler uses a producer/consumer [queue](https://docs.python.org/2/library/queue.html). The crawler fills the queue acording to the indicated algorithm, [BFS](https://en.wikipedia.org/wiki/Breadth-first_search) or [DFS](https://en.wikipedia.org/wiki/Depth-first_search).
