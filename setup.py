@@ -30,7 +30,10 @@ setup(
         'future',
         'lxml',
         'requests',
-        'jenkins-mail-py'
+        'jenkins-mail-py',
+        'bs4',
+        'robotparser',
+        'urlparse'
     ],
     classifiers=[
         'Programming Language :: Python :: 2.7',
