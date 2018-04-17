@@ -121,9 +121,9 @@ def main_crawler(args):
     except KeyboardInterrupt:
         canceled = True
         color_logging("Canceling...", color='red')
-    finally:
-        save_results = False if args.save_results.upper() == "NO" else True
-        web_crawler.print_result(canceled, save_results)
+    #finally:
+        #save_results = False if args.save_results.upper() == "NO" else True
+        #web_crawler.print_result(canceled, save_results)
 
 
 def str2bool(v):
